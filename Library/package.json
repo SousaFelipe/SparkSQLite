@@ -1,0 +1,37 @@
+{
+    "name": "spark-sqlite",
+    "version": "1.0.0",
+    "description": "A simple tool for deploying sqlite on nodejs",
+    "author": {
+        "name": "Felipe Sousa",
+        "email": "sousa.felipe@outlook.com"
+    },
+    "license": "ISC",
+    "private": false,
+    "preferGlobal": true,
+    "main": "./lib/index.js",
+    "bin": {
+        "spark-sqlite": "bin/boot.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SousaFelipe/SparkSQLite.git"
+    },
+    "keywords": [
+        "spark",
+        "sqlite",
+        "spark sqlite",
+        "node sqlite",
+        "node sqlite query builder",
+        "node sqlite model",
+        "nodejs sqlite",
+        "nodejs sqlite query builder",
+        "nodejs sqlite model"
+    ],
+    "bugs": {
+        "url": "https://github.com/SousaFelipe/SparkSQLite/issues"
+    },
+    "dependencies": {
+        "sqlite3": "^4.1.0"
+    }
+}
