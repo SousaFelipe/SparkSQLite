@@ -1,0 +1,21 @@
+{
+    "name": "spark-sqlite-example",
+    "version": "1.0.0",
+    "description": "An example for implementation of spark-sqlite lib",
+    "author": {
+        "name": "Felipe Sousa",
+        "email": "sousa.felipe@outlook.com"
+    },
+    "license": "ISC",
+    "private": false,
+    "main": "./main.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SousaFelipe/SparkSQLite.git"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "spark-sqlite": "^1.0.0",
+        "sqlite3": "^4.1.0"
+    }
+}
