@@ -41,9 +41,9 @@ class Model {
     /**
      * Returns a collection of objects
      * --------------------------------------------------------------------------------
-     * @param {Array}       columns     The names of the columns that will be used in the query
-     * @param {Array}       params      The parameters of each column to use in the query
-     * @param {Function}    callback    A function to call as a return value
+     * @param {array}       columns     The names of the columns that will be used in the query
+     * @param {array}       params      The parameters of each column to use in the query
+     * @param {function}    callback    A function to call as a return value
      */
     select (conditions = {}, callback = undefined) {
         this.validateCallback('list', callback)
@@ -60,8 +60,6 @@ class Model {
                 return callback(rows) || rows
             }
         })
-
-        db.close()
     }
 
 
@@ -69,10 +67,9 @@ class Model {
     /**
      * Store data into a table
      * --------------------------------------------------------------------------------
-     * @param {Object}      inserts  The names of the columns to insert
-     * @param {Function}    callback Call as a return value 
+     * @param {Object}  inserts The names of the columns to insert
      */
-    insert (inserts = {}, callback = undefined) {
+    insert (inserts = {}) {
 
         let insertKeys = this.getKeys(inserts)
         let insertVals = this.getVals(inserts)
@@ -81,10 +78,6 @@ class Model {
 
         db.run(DML.insert(this.schema.table, insertKeys), insertVals, (err) => {
             if (err) throw err
-            else {
-                db.close()
-                return this.select(inserts, callback)
-            }
         })
 
         db.close()
@@ -111,10 +104,10 @@ class Model {
         
         let db = DataBase.getConnection().toWrite()
 
-        db.run(sql, columnVals.concat(updateVals), (err) => {
+        db.run(sql, updateVals.concat(columnVals), (err) => {
             if (err) throw err
         })
-
+        
         db.close()
     }
 

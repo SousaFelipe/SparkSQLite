@@ -1,16 +1,14 @@
 
 
-// Get the Schema class in 'spark-sqlite' package
+// Get the "Schema" class in 'spark-sqlite" package
 const { Schema } = require('spark-sqlite')
 
 
-// Classes like this class, should always extend from the 'Schema' superclass
+// A class like that, should always extends from the "Schema" superclass
 class UserSchema extends Schema {
-
     // Should always have a constructor
     constructor() {
-
-        // Should always call super, passing the table name
+        // Should always call "super", passing the table name
         // and an object containing the table properties
         super('users', {
             name: {
@@ -27,6 +25,5 @@ class UserSchema extends Schema {
 }
 
 
-// To make importing easier, you can instantiate
-// your 'Schema' at export time
+// Exporting the "UserSchema"
 module.exports = UserSchema

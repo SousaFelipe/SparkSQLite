@@ -25,7 +25,7 @@ class DDL {
 
     columnDefinitions (col) {
 
-        let colDefs = `${ col.type || `TEXT` } ${ col.nullable ? `NULL` : `NOT NULL` }`
+        let colDefs = `${ col.type || `NUMBER` } ${ col.nullable ? `NULL` : `NOT NULL` }`
     
         if (col.index) {
             colDefs += `${ col.index } `
