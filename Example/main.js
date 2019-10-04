@@ -4,19 +4,19 @@ const User = require('./app/Models/User')
 
 
 // Stores a new record in a database table
-User.insert({
-    name: 'Felipe Sousa',
-    email: 'sousa.felipe@outlook.com',
-    password: 'secret'
-})
+// User.insert({
+//     name: 'Felipe Sousa',
+//     email: 'sousa.felipe@outlook.com',
+//     password: 'secret'
+// })
 
 
-// Update user email if field name equals 'Felipe Sousa'
-// You can update one or several fields at once
-User.update(
-    { email: 'fake@email.com' },        // The conditions to update this record
-    { email: 'flpssdocarmo0@gmail.com'} // The new value for one, or many fields that will be updated
-)
+// // Update user email if field name equals 'Felipe Sousa'
+// // You can update one or several fields at once
+// User.update(
+//     { email: 'fake@email.com' },        // The conditions to update this record
+//     { email: 'flpssdocarmo0@gmail.com'} // The new value for one, or many fields that will be updated
+// )
 
 
 // Now we are removing a record by the corresponding email

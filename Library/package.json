@@ -30,8 +30,5 @@
     ],
     "bugs": {
         "url": "https://github.com/SousaFelipe/SparkSQLite/issues"
-    },
-    "dependencies": {
-        "sqlite3": "^4.1.0"
     }
 }

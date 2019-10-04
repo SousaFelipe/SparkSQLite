@@ -6,7 +6,7 @@ const path = require('path')
 class DataBase {
     static getConnection() {
 
-        const file = path.resolve('./data/sparklite')
+        const file = path.resolve('./data/sparklite.sqlite3')
 
         return {
 
